@@ -1,0 +1,185 @@
+  -- 1. Simple SELECT Queries (No GROUP BY, No HAVING)
+-- 1. Display all the information of the EMP table?
+-- 2. Display unique Jobs from EMP table?
+-- 2B. Alternative: Display unique Jobs from EMP table?
+-- 3. List the emps in the asc order of their Salaries?
+-- 4. List the details of the emps in asc order of the Deptnos and desc of Jobs?
+-- 5. Display all the unique job groups in the descending order?
+-- 6. Display all the details of all ‘Mgrs’?
+ select * from emp;
+-- 7. List the emps who joined before 1981?
+      select * from emp 
+       where hiredate < '1981-01-01';
+-- 8. List the Empno, Ename, Sal, Daily sal of all emps in the asc order of Annsal?
+     select Empno, Ename, Sal * 12  as sal, sal / 30 as Daily_sal
+     from emp  order by sal,Daily_sal;
+-- 9. Display the Empno, Ename, job, Hiredate, Exp of all Mgrs?
+          select Empno, Ename, job, Hiredate , mgr from emp;
+-- 10. List the Empno, Ename, Sal, Exp of all emps working for Mgr 7369?
+-- 11. Display all the details of the emps whose Comm. is more than their Sal?
+-- 12. List the emps in the asc order of Designations of those joined after the second half of 1981?
+-- 13. List the emps along with their Exp and Daily Sal is more than Rs.100?
+-- 14. List the emps who are either ‘CLERK’ or ‘ANALYST’ in the Desc order?
+-- 15. List the emps who joined on 1-MAY-81,3-DEC-81,17-DEC-81,19-JAN-80 in asc order of seniority?
+-- 16. List the emps who are working for the Deptno 10 or 20?
+-- 17. List the emps who are joined in the year 81?
+-- 18. List the emps who are joined in the month of Aug 1980?
+-- 19. List the emps whose Annual sal ranging from 22000 and 45000?
+-- 20. List the Enames those are having five characters in their Names?
+-- 21. List the Enames those are starting with ‘S’ and with five characters?
+-- 22. List the emps those are having four chars and third character must be ‘r’?
+-- 23. List the Five character names starting with ‘S’ and ending with ‘H’?
+-- 24. List the emps who joined in January?
+-- 25. List the emps who joined in the month of which second character is ‘a’?
+-- 26. List the emps whose Sal is four digit number ending with Zero?
+-- 27. List the emps whose names having a character set ‘ll’ together?
+-- 28. List the emps those who joined in 80’s?
+-- 29. List the emps who does not belong to Deptno 20?
+-- 30. List all the emps except ‘PRESIDENT’ & ‘MGR” in asc order of Salaries?
+-- 31. List all the emps who joined before or after 1981?
+-- 32. List the emps whose Empno not starting with digit 78?
+-- 33. List the emps who are working under ‘MGR’?
+-- 34. List the emps who joined in any year but not belongs to the month of March?
+-- 35. List all the Clerks of Deptno 20?
+-- 36. List the emps of Deptno 30 or 10 joined in the year 1981?
+-- 37. Display the details of SMITH?
+-- 38. Display the location of SMITH?
+-- 39. List the total information of EMP table along with DNAME and Loc of all the emps Working Under ‘ACCOUNTING’ & ‘RESEARCH’ in asc Deptno?
+-- 40. List the Empno, Ename, Sal, Dname of all the ‘MGRS’ and ‘ANALYST’ working in New York, Dallas with exp more than 7 years without receiving the Comm asc order of Loc?
+-- 41. Display Empno, Ename, Sal, Dname, Loc, Deptno, Job of emps working at CHICAGO or ACCOUNTING dept with Ann Sal>28000 but Sal not in 3000 or 2800, not Mgr, and empno with digit ‘7’ or ‘8’ in 3rd position in asc Deptno desc job?
+-- 42. Display the total info of the emps along with Grades in the asc order?
+-- 44. Display all Grade 4,5 Analyst and Mgr?
+-- 46. List all info of emp with Loc and Grade of emps who belong to Grade range 2 to 4 working at Dept not starting with ‘OP’ and not ending with ‘S’, designation having ‘a’ anywhere, joined 1981 not in Mar or Sep, and Sal not ending with ‘00’, asc order of Grades?
+-- 47. List details of Depts along with Empno, Ename or without the emps?
+-- 48. List details of emps whose Salaries more than employee BLAKE?
+-- 49. List emps whose Jobs are same as ALLEN?
+-- 50. List emps who are senior to King?
+-- 51. List emps who are senior to their own MGRS?
+-- 52. List emps of Deptno 20 whose Jobs are same as Deptno 10?
+-- 53. List emps whose Sal is same as FORD or SMITH in desc order of Sal?
+-- 54. List emps whose Jobs are same as MILLER or Sal more than ALLEN?
+-- 55. List emps whose Sal > total remuneration of SALESMAN?
+-- 56. List emps who are senior to BLAKE working at CHICAGO & BOSTON?
+-- 57. List emps of Grade 3,4 belonging to ACCOUNTING and RESEARCH whose Sal > ALLEN and exp > SMITH asc order of EXP?
+-- 58. List emps whose jobs same as SMITH or ALLEN?
+-- 60. List any jobs of deptno 10 that are not found in deptno 20?
+-- 61. List emps of EMP1 who are not found in EMP2?
+-- 62. Find the highest salary of EMP table?
+-- 63. Find details of highest paid employee?
+-- 64. Find highest paid employee of sales department?
+-- 65. List most recently hired emp of grade 3 belonging to location CHICAGO?
+-- 66. List employees senior to most recently hired employee working under KING?
+-- 67. List details of employee belonging to NEW YORK with grade 3 to 5 except ‘PRESIDENT’, sal > highest in Chicago where manager and salesman not working under KING?
+-- 68. List details of senior employee belonging to 1981?
+-- 69. List employees who joined in 1981 with job same as most senior person of 1981?
+-- 70. List most senior employee working under KING with grade > 3?
+-- 82. Display employees whose manager name is JONES?
+-- 83. List employees whose salary > 3000 after giving 20% increment?
+-- 84. List employees with department names?
+-- 85. List employees who are not working in SALES department?
+-- 86. List employees’ name, department, salary and commission for those earning between 2000 and 5000 while location is CHICAGO?
+-- 87. List employees whose salary is greater than their manager’s salary?
+-- 88. List grade and employee name for deptno 10 or 30 but salary grade not 4 while joined company before ’31-dec-82’?
+-- 89. List name, job, dname, location for those who are working as MANAGERs?
+-- 90. List employees whose manager name is JONES and also list their manager name?
+-- 91. List name and salary of FORD if his salary is equal to high salary of his grade?
+-- 92. List name, job, dname, salary, grade department wise?
+-- 93. List employee name, job, salary, grade and dname except clerks sorted highest salary?
+-- 94. List employees name, job who are without manager?
+-- 95. List names of employees who are getting highest salary department wise?
+-- 96. List employees whose salary equals average of max and minimum salary?
+-- 139. List Managers who are getting less than their employees’ salary?
+-- 140. Print details of all emps who are subordinates to Blake?
+-- 141. List emps who are working as Managers using correlated sub-query?
+-- 142. List emps whose Mgr name is ‘Jones’ and also with his Manager name?
+-- 144. Find how many Managers are in the company?
+-- 146. Check whether all employee numbers are unique?
+-- 147. List employees drawing less than 1000 sorted by salary?
+-- 149. Find jobs filled in first half of 1983 and same job filled during the same period of 1984?
+-- 150. Find emps who joined before their Managers?
+-- 151. List all emps by name and number with their Manager’s name and number. Also list KING who has no ‘Manager’.
+-- 152. Find all emps who earn minimum Salary for each job in ascending order?
+-- 153. Find all emps who earn highest salary in each job type sorted descending?
+-- 154. Find most recently hired emps in each Dept ordered by Hiredate?
+-- 155. List employee name, Salary, Deptno for employees earning greater than dept average salary ordered by Deptno?
+-- 156. List Deptno where there are no emps?
+-- 158. Find max average salary drawn for each job except ‘President’?
+-- 159. Find name and Job of emps who earn max salary and Commission?
+-- 160. List emps not belonging to dept 10 but with same job and Salary as emps of dept 10?
+-- 161. List Deptno, Name, Job, Salary and Sal+Comm of SALESMAN earning max salary and commission descending order?
+-- 162. List Deptno, Name, Job, Salary and Sal+Comm of emps who earn second highest earnings (sal + comm.)?
+-- 163. List Deptno and average salaries for dept with average salary less than averages for all departments?
+-- 164. List names and salaries of emps with their manager names and salaries for those who earn more salary than their Manager?
+-- 165. List Name, Job, Salary of emps in department with highest average salary?
+-- 166. List empno, sal, comm of emps?
+-- 167. List details of emps in ascending order of salary?
+-- 168. List dept in ascending order of job and descending order of emps’ empno?
+-- 169. Display unique dept of emps?
+-- 170. Display unique dept with jobs?
+-- 171. Display details of BLAKE?
+-- 172. List all clerks?
+-- 173. List emps joined on 1st May 81?
+-- 174. List empno, ename, sal, deptno of dept 10 emps in ascending order of salary?
+-- 175. List emps whose salaries are less than 3500?
+-- 176. List empno, ename, sal of all emps joined before 1 Apr 81?
+-- 177. List emps whose annual sal is less than 25000 in ascending order of salaries?
+-- 178. List empno, ename, annsal, dailysal of all salesmen in ascending ann sal?
+-- 179. List empno, ename, hiredate, current date & exp in ascending order of exp?
+-- 180. List emps whose exp is more than 10 years?
+-- 182. List emps who are working as managers?
+-- 183. List emps who are either clerks or managers?
+-- 184. List emps who have joined on the following dates: 1 May 81, 17 Nov 81, 30 Dec 81?
+-- 185. List emps who have joined in the year 1981?
+-- 186. List emps whose annual sal ranging from 23000 to 40000?
+-- 187. List emps working under the mgrs 7369, 7890, 7654, 7900?
+-- 188. List emps who joined in the second half of 82?
+-- 189. List all 4 char emps?
+-- 190. List emp names starting with ‘M’ with 5 chars?
+-- 191. List emps end with ‘H’ all together 5 chars?
+-- 192. List names start with ‘M’?
+-- 193. List emps who joined in the year 81?
+-- 194. List emps whose sal ends with 00?
+-- 195. List emps who joined in the month of JAN?
+-- 196. Who joined in the month having char ‘a’?
+-- 197. Who joined in the month having second char ‘a’?
+-- 198. List emps whose salary is 4 digit number?
+-- 199. List emps who joined in 80’s?
+-- 200. List emps who are clerks who have exp more than 8 years?
+-- 201. List mgrs of dept 10 or 20?
+-- 202. List emps joined in January with salary ranging from 1500 to 4000?
+-- 203. List unique jobs of dept 20 and 30 in descending order?
+-- 204. List emps along with exp of those working under the mgr whose number is starting with 7 but should not have a 9 joined before 1983?
+-- 205. List emps who are working as either mgr or analyst with salary ranging from 2000 to 5000 and without comm?
+-- 206. List empno, ename, sal, job of emps with annual sal < 34000 but receiving some comm, where comm should not be > sal, and desg should be salesman working for dept 30?
+-- 207. List emps working for dept 10 or 20 with desgs clerk or analyst, sal is either 3 or 4 digits with exp > 8 years, not belonging to Mar, Apr, Sep months, working for mgrs with no ending with 88 and 56?
+-- 208. Complex condition of emps belonging to dept 10 or 20 with exp 6 to 10 years, under same mgr, without comm, with job not ending irrespective of the position, with comm > 200, exp ≥ 7 years, sal < 2500, not belonging to Sep or Nov, working under mgr whose no is not having digits either 9 or 0, sorted asc by deptno and desc by deptno?
+-- 209. List details of emps working at Chicago?
+-- 210. List empno, ename, deptno, loc of all emps?
+-- 211. List empno, ename, loc, dname of all emps for depts 10 and 20?
+-- 212. List empno, ename, sal, loc of emps working at Chicago or Dallas with exp > 6 years?
+-- 213. List emps along with loc who belong to Dallas, New York with sal ranging from 2000 to 5000 joined in 81?
+-- 214. List empno, ename, sal, grade of all emps?
+-- 215. List grade 2 and 3 emps of Chicago?
+-- 216. List emps with loc and grade of accounting dept or loc Dallas or Chicago with grades 3 to 5 and exp > 6 years?
+-- 217. List grade 3 emps of research and operations depts joined after 1987 and whose names should not be Miller or Allen?
+-- 218. List emps whose job is same as Smith?
+-- 219. List emps who are senior to Miller?
+-- 220. List emps whose job is same as either Allen or sal > Allen?
+-- 221. List emps who are senior to their own manager?
+-- 222. List emps whose sal greater than Blake’s sal?
+-- 223. List dept 10 emps whose sal > Allen’s sal?
+-- 224. List mgrs who are senior to King and junior to Smith?
+-- 225. List empno, ename, loc, sal, dname, loc of all emps belonging to King’s dept?
+-- 226. List emps whose salgrade are greater than grade of Miller?
+-- 227. List emps belonging to Dallas or Chicago with the grade same as Adams or exp more than Smith?
+-- 228. List emps whose sal is same as Ford or Blake?
+-- 229. List emps whose sal is same as any one of the following?
+-- 230. Sal of any clerk of EMP1 table?
+-- 231. Any emp of EMP2 joined before 1982?
+-- 232. Total remuneration (sal+comm) of salespersons of Sales dept belonging to EMP3 table?
+-- 233. Any grade 4 emps sal of EMP4 table?
+-- 234. Any emp sal of EMP5 table?
+-- 235. List highest paid emp?
+-- 236. List details of most recently hired emp of dept 30?
+-- 237. List highest paid emp of Chicago joined before most recently hired emp of grade 2?
+-- 238. List highest paid emp working under King?
