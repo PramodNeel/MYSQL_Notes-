@@ -1,0 +1,246 @@
+-- 1) Display all the information of the EMP table?
+    select * from emp;
+-- 2) Display unique jobs from EMP table?
+      select distinct job from emp;
+-- 3) List the employees in the asc order of their salaries?
+       select ename, sal
+       from emp order by ename asc;
+-- 4) List the details of employees in asc order of the deptnos and desc of jobs?
+      select * from emp 
+      order by deptno asc , job desc;
+
+-- 5) Display all the unique job groups in the descending order?
+-- 6) Display all the details of all managers?
+-- 7) List the employees who joined before 1981?
+-- 8) List the Empno, Ename, Sal, Daily sal of all employees in the asc order of annual salary?
+-- 9) Display the Empno, Ename, job, Hiredate, experience (years) of all managers?
+-- 10) List the Empno, Ename, Sal, experience of all employees working for manager 7369?
+-- 11) Display all the details of the employees whose commission is more than their salary?
+-- 12) List the employees in the asc order of designations of those who joined after the second half of 1981?
+-- 13) List the employees along with their experience whose daily salary is more than 100?
+-- 14) List the employees who are either CLERK or ANALYST in the desc order?
+-- 15) List the employees who joined on 01-MAY-81, 03-DEC-81, 17-DEC-81, 19-JAN-80 in asc order of seniority?
+-- 16) List the employees who are working for the Deptno 10 or 20?
+-- 17) List the employees who joined in the year 1981?
+-- 18) List the employees who joined in the month of Aug 1980?
+-- 19) List the employees whose annual salary ranges from 22000 to 45000?
+-- 20) List the employee names that have five characters?
+-- 21) List the employee names that start with ‘S’ and have five characters?
+-- 22) List the employees that have four characters and the third character is ‘R’?
+-- 23) List the five-character names starting with ‘S’ and ending with ‘H’?
+-- 24) List the employees who joined in January?
+-- 25) List the employees who joined in a month whose second character is ‘a’?
+-- 26) List the employees whose salary is a four-digit number ending with zero?
+-- 27) List the employees whose names contain the substring ‘LL’?
+-- 28) List the employees who joined in the 80’s?
+-- 29) List the employees who do not belong to Deptno 20?
+-- 30) List all the employees except PRESIDENT and MANAGER in ascending order of salaries?
+-- 31) List all the employees who joined before or after 1981 (i.e., not in 1981)?
+-- 32) List the employees whose Empno does not start with digit 78?
+-- 33) List the employees who are working under managers?
+-- 34) List the employees who joined in any year but not in the month of March?
+-- 35) List all the CLERKs of Deptno 20?
+-- 36) List the employees of Deptno 30 or 10 who joined in the year 1981?
+-- 37) Display the details of SMITH?
+-- 38) Display the location of SMITH?
+-- 39) List EMP table info with DNAME and LOC for employees under ACCOUNTING and RESEARCH in ascending Deptno?
+-- 40) List Empno, Ename, Sal, Dname of MANAGERs and ANALYSTs in New York or Dallas with experience > 7 years and no commission, in asc order of Loc?
+-- 41) Display Empno, Ename, Sal, Dname, Loc, Deptno, Job for employees working at Chicago or for ACCOUNTING with annual salary > 28000, salary not 3000/2800, not MANAGER, empno having digit 7 or 8 in 3rd position; sort by Deptno asc, Job desc?
+-- 42) Display total information of employees along with Grades in ascending grade order?
+-- 43) List all the Grade 2 and Grade 3 employees?
+-- 44) Display all Grade 4 and 5 employees who are ANALYST or MANAGER?
+-- 45) List Empno, Ename, Sal, Dname, Grade, Experience, Annual Salary of employees working for Dept 10 or 20?
+-- 46) List info with Loc and Grade for employees with grade 2–4, in departments not starting with ‘OP’ and not ending with ‘S’, job containing ‘A’, joined in 1981 but not in MAR or SEP, and salary not ending ‘00’, sorted by grade?
+-- 47) List the details of departments along with Empno, Ename or without employees?
+-- 48) List the details of the employees whose salaries are more than BLAKE’s?
+-- 49) List the employees whose jobs are the same as ALLEN’s?
+-- 50) List the employees who are senior to KING?
+-- 51) List the employees who are senior to their own managers?
+-- 52) List the employees of Deptno 20 whose jobs are the same as those in Deptno 10?
+-- 53) List the employees whose salary equals FORD’s or SMITH’s, in desc order of salary?
+-- 54) List the employees whose job is the same as MILLER’s or whose salary is more than ALLEN’s?
+-- 55) List the employees whose salary is greater than the total remuneration of the SALESMAN?
+-- 56) List the employees who are senior to BLAKE and working at CHICAGO or BOSTON?
+-- 57) List Grade 3 or 4 employees in ACCOUNTING or RESEARCH with salary > ALLEN and experience > SMITH, in ascending order of experience?
+-- 58) List the employees whose jobs are the same as SMITH’s or ALLEN’s?
+-- 59) Multi-part: display details of employees whose salary equals (a) an employee salary from EMP1; (b) 3/4 salary of any manager in EMP2; (c) salary of any person with 5 years’ experience in SALES dept of EMP3; (d) any grade 2 employee of EMP4; (e) any grade 2 or 3 employee in SALES or OPERATIONS who joined in 1989?
+-- 60) List jobs of Deptno 10 that are not found in Deptno 20?
+-- 61) List employees of EMP1 who are not found in EMP2?
+-- 62) Find the highest salary in EMP?
+-- 63) Find details of the highest paid employee?
+-- 64) Find the highest paid employee of SALES department?
+-- 65) List the most recently hired grade 3 employee belonging to location CHICAGO?
+-- 66) List employees who are senior to the most recently hired employee working under KING?
+-- 67) List details of employees belonging to NEW YORK with grade 3 to 5, not PRESIDENT, with salary > highest paid employee of CHICAGO among MANAGER/SALESMAN and not under KING?
+-- 68) List details of the most senior employee who belongs to 1981?
+-- 69) List employees who joined in 1981 with job same as the most senior person of 1981?
+-- 70) List the most senior employee working under KING whose grade is more than 3?
+-- 71) Find the total salary given to MANAGER?
+-- 72) Find total annual salary to distribute job-wise in year 1981?
+-- 73) Display total salary of employees belonging to grade 3?
+-- 74) Display average salaries of all CLERKs?
+-- 75) List employees in Dept 20 whose salary is greater than average salary of Dept 10?
+-- 76) Display number of employees for each job group, deptno-wise?
+-- 77) List manager number and count of employees working under each manager, ordered by manager number?
+-- 78) List departments where at least two employees are working?
+-- 79) Display grade, number of employees, and max salary of each grade?
+-- 80) Display dname, grade, and number of employees where at least two employees are CLERKs?
+-- 81) List details of the department with maximum number of employees?
+-- 82) Display employees whose manager name is JONES?
+-- 83) List employees whose salary is more than 3000 after 20% increment?
+-- 84) List employees with department names?
+-- 85) List employees who are not working in SALES department?
+-- 86) List employee name, dept, salary, and commission for those with salary between 2000 and 5000 while loc is CHICAGO?
+-- 87) List employees whose salary is greater than their manager’s salary?
+-- 88) List grade and employee name for Deptno 10 or 20 where salgrade is not 4 and hiredate before 31-DEC-82?
+-- 89) List name, job, dname, location for those working as MANAGERs?
+-- 90) List employees whose manager is JONES and also list their manager’s name?
+-- 91) List name and salary of FORD if his salary equals the hisal of his grade?
+-- 92) List name, job, dname, salary, grade, dept-wise?
+-- 93) List employee name, job, salary, grade, and dname except CLERKs, sorted by highest salary?
+-- 94) List employee name and job who are without manager?
+-- 95) List names of employees getting the highest salary dept-wise?
+-- 96) List employees whose salary equals the average of max and min salaries?
+-- 97) List number of employees in each department where the number is more than 3?
+-- 98) List names of departments where at least 3 employees are working?
+-- 99) List managers whose salary is more than the average salary of their employees?
+-- 100) List name, salary, commission for employees whose net pay is greater than or equal to any other employee’s salary?
+-- 101) List employees whose salary is less than their manager’s but more than any other manager’s salary?
+-- 102) List employee names and their department’s average salary (dept-wise)?
+-- 103) Find the least 5 earners of the company?
+-- 104) Find employees whose salaries are greater than their managers’ salaries?
+-- 105) List managers who are not working under the PRESIDENT?
+-- 106) List records from EMP whose deptno is not in DEPT?
+-- 107) List name, salary, commission, and net pay for employees where net pay is more than any other employee’s salary?
+-- 108) List employees who will retire after 31-DEC-89 assuming max job period is 20 years?
+-- 109) List employees whose salary is an odd value?
+-- 110) List employees whose salary contains 3 digits?
+-- 111) List employees who joined in December?
+-- 112) List employees whose names contain ‘A’?
+-- 113) List employees whose Deptno digits appear within their salary digits?
+-- 114) List employees whose first 2 chars of hiredate equal last 2 chars of salary?
+-- 115) List employees whose 10% of salary equals the year of joining?
+-- 116) List first 50% of chars of Ename in lower case and remaining in upper case?
+-- 117) List dnames where number of employees equals number of characters in the dname?
+-- 118) List employees who joined before the 15th of the month?
+-- 119) List dnames where number of characters equals the number of employees in any other dept?
+-- 120) List employees who are working as MANAGERs?
+-- 121) List the name of the department where the highest number of employees are working?
+-- 122) Count the number of employees who are MANAGERs (using set option)?
+-- 123) List employees who joined the company on the same date?
+-- 124) List details of employees whose grade equals one tenth of the SALES dept number?
+-- 125) List the name of departments where more than the average number of employees are working?
+-- 126) List the manager’s name who has the maximum number of employees under him?
+-- 127) List ename and salary increased by 15% expressed in dollars?
+-- 128) Produce output of EMP table with ‘EMP_AND_JOB’ as concatenation of ename and job?
+-- 129) Produce output: EMPLOYEE column as “ENAME (job in lowercase)”?
+-- 130) List employees with hiredate formatted like “June 4, 1988”?
+-- 131) Print list of employees showing ‘JUST SALARY’ if sal > 1500, ‘ON TARGET’ if sal = 1500, ‘BELOW 1500’ if sal < 1500?
+-- 132) Return the day of the week for any date entered in format ‘DD-MM-YY’?
+-- 133) Calculate the length of service (years) of any employee (define variable to avoid repetition)?
+-- 134) Validate strings of format ‘NN/NN’: first and last two are digits and middle is ‘/’; print YES or NO?
+-- 135) Employees hired on/before 15th are paid last Friday of that month; those after 15th on first Friday of next month. List ename, hiredate, first pay date, sorted by hiredate?
+-- 136) Count number of characters in names excluding spaces?
+-- 137) Find employees getting a decimal salary value without using LIKE?
+-- 138) List employees whose salary contains first four digits of their deptno?
+-- 139) List managers who are getting less than their employees’ salary?
+-- 140) Print details of all employees who are subordinates to BLAKE?
+-- 141) List employees who are working as MANAGERs using a correlated subquery?
+-- 142) List employees whose manager is JONES and also show their manager’s manager?
+-- 143) Define a variable for annual remuneration (12*(sal+comm)) and find employees who can earn >= 30000 per year?
+-- 144) Find how many MANAGERs are in the company?
+-- 145) Find average salary and average total remuneration for each job type?
+-- 146) Check whether all employee numbers are indeed unique?
+-- 147) List employees drawing less than 1000, sorted by salary?
+-- 148) List ename, job, annual salary, deptno, dname, grade for employees who earn >= 36000 a year or who are not CLERKs?
+-- 149) Find the job(s) filled in first half of 1983 and also filled in the same period of 1984?
+-- 150) Find employees who joined the company before their managers?
+-- 151) List all employees (name and number) along with their manager’s name and number; include KING who has no manager?
+-- 152) Find employees who earn the minimum salary for each job, in ascending salary?
+-- 153) Find employees who earn the highest salary in each job, sorted by descending salary?
+-- 154) Find the most recently hired employees in each department, ordered by hiredate?
+-- 155) List ename, salary, deptno for each employee who earns more than the average for their department, ordered by deptno?
+-- 156) List deptnos where there are no employees?
+-- 157) List number of employees and average salary within each department for each job?
+-- 158) Find the maximum average salary for each job excluding PRESIDENT?
+-- 159) Find name and job of employees who have max salary and non-null commission?
+-- 160) List name, job, and salary of employees not in dept 10 but who have same job and salary as employees of dept 10?
+-- 161) List deptno, name, job, salary, and salary+commission of SALESMAN who earn the maximum total (sal+comm), in descending order?
+-- 162) List deptno, ename, job, sal, and (sal+comm) for employees who earn the second highest total earnings?
+-- 163) List deptno and their average salaries for departments whose average salary is less than the overall average?
+-- 164) List employee and manager names and salaries for employees who earn more than their manager?
+-- 165) List name, job, salary of employees in the department with the highest average salary?
+-- 166) List empno, sal, comm of employees?
+-- 167) List details of employees in ascending order of salary?
+-- 168) List employees in ascending order of job and descending order of empno?
+-- 169) Display departments that appear in EMP (distinct deptnos)?
+-- 170) Display unique deptno with job combinations?
+-- 171) Display details of BLAKE?
+-- 172) List all the CLERKs?
+-- 173) List all employees who joined on 01-MAY-81?
+-- 174) List empno, ename, sal, deptno of dept 10 employees in ascending salary?
+-- 175) List employees whose salaries are less than 3500?
+-- 176) List empno, ename, sal of all employees who joined before 01-APR-81?
+-- 177) List employees whose annual salary is less than 25000, in ascending salary?
+-- 178) List empno, ename, annual salary, and daily salary of all SALESMAN in ascending annual salary?
+-- 179) List empno, ename, hiredate, current date, and experience in ascending order of experience?
+-- 180) List employees whose experience is more than 10 years?
+-- 181) List payroll columns (TA 30%, DA 40%, HRA 50%, GROSS, LIC, PF, net, deductions, net allow, net sal) in ascending order of net salary?
+-- 182) List employees who are working as MANAGERs?
+-- 183) List employees who are either CLERK or MANAGER?
+-- 184) List employees who joined on 01-MAY-81, 17-NOV-81, 30-DEC-81?
+-- 185) List employees who joined in the year 1981?
+-- 186) List employees whose annual salary ranges from 23000 to 40000?
+-- 187) List employees working under managers 7369, 7890, 7654, 7900?
+-- 188) List employees who joined in the second half of 1982?
+-- 189) List all 4-character employee names?
+-- 190) List employee names starting with ‘M’ having 5 characters?
+-- 191) List employees whose names end with ‘H’ and have 5 characters?
+-- 192) List names starting with ‘M’?
+-- 193) List employees who joined in the year 81?
+-- 194) List employees whose salary ends with ‘00’?
+-- 195) List employees who joined in January?
+-- 196) List employees who joined in a month containing the character ‘A’?
+-- 197) List employees who joined in a month whose second character is ‘A’?
+-- 198) List employees whose salary is a 4-digit number?
+-- 199) List employees who joined in the 80s?
+-- 200) List CLERKs who have experience more than 8 years?
+-- 201) List MANAGERs of Dept 10 or 20?
+-- 202) List employees who joined in JAN with salary ranging from 1500 to 4000?
+-- 203) List unique jobs of Dept 20 and 30 in descending order?
+-- 204) List employees with experience who work under a manager number starting with 7 but not containing 9, and who joined before 1983?
+-- 205) List employees who are MANAGER or ANALYST with salary 2000–5000 and no commission?
+-- 206) List Empno, Ename, Sal, Job for employees with annual earnings < 34000, having commission not null, commission < salary, job = SALESMAN, dept = 30?
+-- 207) List employees in Dept 10 or 20, job CLERK or ANALYST, salary 3 or 4 digits, experience > 8 years, hire month not MAR/APR/SEP, and manager number not ending with 88 or 56?
+-- 208) Complex: employees of Dept 10 or 20 with exp 6–10 years, same manager, without commission; additional conditions on job, commission > 200, exp >= 7, sal < 2500; not in SEP or NOV; manager number without digits 9 or 0; sorted by dept asc and desc (ambiguous source question)?
+-- 209) List details of employees working at CHICAGO?
+-- 210) List Empno, Ename, Deptno, Loc of all employees?
+-- 211) List Empno, Ename, Loc, Dname of employees in departments 10 and 20?
+-- 212) List Empno, Ename, Sal, Loc of employees working at CHICAGO or DALLAS with experience > 6 years?
+-- 213) List employees along with Loc who belong to DALLAS or NEW YORK, with salary 2000–5000, joined in 1981?
+-- 214) List Empno, Ename, Sal, Grade of all employees?
+-- 215) List grade 2 and 3 employees?
+-- 216) List employees with Loc and Grade for ACCOUNTING department or Loc in DALLAS/CHICAGO, with grades 3 to 5 and experience > 6 years?
+-- 217) List grade 3 employees of RESEARCH and OPERATIONS who joined after 1987 and whose names are not MILLER or ALLEN?
+-- 218) List employees whose job is the same as SMITH’s?
+-- 219) List employees who are senior to MILLER?
+-- 220) List employees whose job is same as ALLEN’s or whose salary is greater than ALLEN’s?
+-- 221) List employees who are senior to their own manager?
+-- 222) List employees whose salary is greater than BLAKE’s?
+-- 223) List Dept 10 employees whose salary is greater than ALLEN’s?
+-- 224) List managers who are senior to KING and junior to SMITH?
+-- 225) List Empno, Ename, Loc, Sal, Dname for all employees belonging to KING’s department?
+-- 226) List employees whose salgrade is greater than MILLER’s grade?
+-- 227) List employees belonging to DALLAS or CHICAGO with grade same as ADAMS or experience greater than SMITH?
+-- 228) List employees whose salary is the same as FORD’s or BLAKE’s?
+-- 229) List employees whose salary is the same as any other employee’s salary?
+-- 230) Salary of any CLERK from EMP1 table? (question stub referencing another table)
+-- 231) Any employee of EMP2 who joined before 1982?
+-- 232) Total remuneration (sal+comm) of all SALESMAN of SALES dept belonging to EMP3? (question stub)
+-- 233) Any grade 4 employee salary of EMP4 table?
+-- 234) Any employee salary of EMP5 table?
+-- 235) List the highest paid employee?
+-- 236) List details of the most recently hired employee of Dept 30?
+-- 237) List the highest paid employee of CHICAGO who joined before the most recently hired grade 2 employee?
+-- 238) List the highest paid employee working under KING?
+
