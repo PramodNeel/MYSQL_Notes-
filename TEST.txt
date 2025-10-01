@@ -1,0 +1,53 @@
+🔢 *Arithmetic Operators (+, -, , /, %)
+List all employees and show their salary increased by 10%.
+
+Show employee names with their annual salary (sal * 12).
+
+Show names of employees with salary + commission.
+
+Show employee names where commission is more than half of salary.
+
+Find employees whose salary is exactly divisible by 100.
+
+Display employee names and difference between their salary and 2000.
+
+Find employees whose salary times 2 is more than 5000.
+
+🔍 Comparison Operators (=, !=, <>, >, <, >=, <=)
+Find employees whose salary is greater than 3000.
+
+Find employees whose commission is equal to 0.
+
+Find employees whose job is not 'MANAGER'.
+
+Find employees hired before '1981-12-31'.
+
+Find employees in department 20 with salary greater than 1000.
+
+Find employees whose salary is between 1000 and 2000.
+
+Show employees whose empno is not equal to their manager's number.
+
+Find employees whose commission is not null and greater than 100.
+
+🧠 Logical Operators (AND, OR, NOT)
+Find employees with job = 'CLERK' and salary > 1000.
+
+Find employees in department 30 or job is 'MANAGER'.
+
+Find employees who are not in department 10.
+
+Show employees with commission null and salary above 1500.
+
+Show employees whose job is not 'SALESMAN' or salary less than 2000.
+
+🔠 String Operators (LIKE, NOT LIKE, CONCAT)
+Find employees whose name starts with 'A'.
+
+Find employees whose name contains the letter 'T'.
+
+Find employees whose name ends with 'N'.
+
+Find employees whose name has exactly 5 characters.
+
+Show employee names concatenated with their job (e.g., 'ALLEN - SALESMAN').
